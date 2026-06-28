@@ -37,15 +37,25 @@
     "crate": "irodori_extension_bigquery",
     "entrypoints": [
       "irodori_extension_abi_version",
+      "irodori_connector_engine_json",
       "irodori_extension_manifest_json",
       "irodori_connector_config_json",
-      "irodori_connector_call_json"
-    ]
+      "irodori_connector_call_json",
+      "irodori_connector_free_buffer"
+    ],
+    "supportedCalls": [
+      "health",
+      "describe",
+      "manifest",
+      "config"
+    ],
+    "driverLinked": false
   },
   "source": {
     "marketplaceId": "irodori.bigquery",
     "repository": "https://github.com/hjosugi/irodori-extension-bigquery",
     "knowledgeEngineStatus": "wired",
-    "adapter": "db/bigquery.rs"
+    "adapter": "db/bigquery.rs",
+    "adapterSha256": "b950c8bc939a571335e338ada86ed96aa51a50a8e8d55ee36b6047958afb6573"
   }
 }

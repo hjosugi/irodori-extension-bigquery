@@ -3,6 +3,7 @@ name = "irodori-extension-bigquery"
 version = "0.1.0"
 edition = "2021"
 license = "MIT OR 0BSD"
+description = "Irodori Table native connector extension."
 publish = false
 
 [lib]

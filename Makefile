@@ -1,4 +1,9 @@
-.PHONY: build test package clean
+.PHONY: build check fmt test package clean
+
+check: fmt test
+
+fmt:
+	cargo fmt --check
 
 build:
 	cargo build --release
