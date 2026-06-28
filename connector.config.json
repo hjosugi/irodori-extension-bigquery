@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "visibility": "public",
+  "extensionId": "irodori.bigquery",
+  "connector": {
+    "id": "bigquery.connector",
+    "engine": "bigquery",
+    "label": "BigQuery",
+    "aliases": [
+      "bigquery",
+      "BigQuery"
+    ],
+    "defaultPort": 443,
+    "wire": "bigquery",
+    "module": "bigquery.driver",
+    "features": [
+      "metadata",
+      "sql",
+      "streaming",
+      "explain"
+    ]
+  },
+  "runtime": {
+    "abi": "irodori.connector.native.v1",
+    "module": {
+      "id": "bigquery.driver",
+      "path": "dist/native",
+      "platforms": [
+        "windowsX64",
+        "windowsArm64",
+        "macosX64",
+        "macosArm64",
+        "linuxX64",
+        "linuxArm64"
+      ]
+    },
+    "crate": "irodori_extension_bigquery",
+    "entrypoints": [
+      "irodori_extension_abi_version",
+      "irodori_extension_manifest_json",
+      "irodori_connector_config_json",
+      "irodori_connector_call_json"
+    ]
+  },
+  "source": {
+    "marketplaceId": "irodori.bigquery",
+    "repository": "https://github.com/hjosugi/irodori-extension-bigquery",
+    "knowledgeEngineStatus": "wired",
+    "adapter": "db/bigquery.rs"
+  }
+}
