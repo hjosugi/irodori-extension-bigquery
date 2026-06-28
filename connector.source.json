@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "extensionId": "irodori.bigquery",
+  "visibility": "public",
+  "version": "0.1.0",
+  "connector": {
+    "id": "bigquery.connector",
+    "engine": "bigquery",
+    "label": "BigQuery",
+    "aliases": [
+      "bigquery",
+      "BigQuery"
+    ],
+    "defaultPort": 443,
+    "wire": "bigquery",
+    "module": "bigquery.driver",
+    "features": [
+      "metadata",
+      "sql",
+      "streaming",
+      "explain"
+    ]
+  },
+  "connection": {
+    "endpoint": {
+      "modes": [
+        "cloudResource",
+        "connectionString"
+      ],
+      "defaultPort": 443,
+      "fields": [
+        {
+          "id": "projectId",
+          "label": "Google Cloud project",
+          "type": "string",
+          "profileField": "database",
+          "required": true
+        }
+      ]
+    },
+    "authMethods": [
+      "none",
+      "connectionString",
+      "oauthAccessToken",
+      "serviceAccountJson",
+      "serviceAccountJwt",
+      "googleApplicationDefaultCredentials",
+      "oauth2",
+      "workloadIdentity",
+      "customDriverOptions"
+    ],
+    "tls": "required",
+    "transports": "default",
+    "optionNamespaces": [
+      "bigquery",
+      "googleCloud",
+      "oauth"
+    ],
+    "customDriverOptions": true
+  },
+  "runtime": {
+    "driverLinked": false
+  },
+  "source": {
+    "knowledgeEngineStatus": "wired",
+    "adapter": "db/bigquery.rs"
+  }
+}
