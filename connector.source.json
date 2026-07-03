@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "extensionId": "irodori.bigquery",
   "visibility": "public",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "connector": {
     "id": "bigquery.connector",
     "engine": "bigquery",
@@ -44,6 +44,7 @@
       "oauthAccessToken",
       "serviceAccountJson",
       "serviceAccountJwt",
+      "serviceAccountImpersonation",
       "googleApplicationDefaultCredentials",
       "oauth2",
       "workloadIdentity",
